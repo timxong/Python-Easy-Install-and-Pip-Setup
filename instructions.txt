@@ -1,0 +1,13 @@
+# Run Windows PowerShell as Administrator
+# Navigate to the Python directory (or create a new folder in C:\)
+# mkdir C:\Environments
+# cd C:\Environments
+
+# This gets the easy install script and puts it in C:\Python27
+(new-object System.Net.WebClient).DownloadFile('http://python-distribute.org/distribute_setup.py', 'C:\Python27\distribute_setup.py')
+
+# This gets the pip script and puts it in C:\Python27
+(new-object System.Net.WebClient).DownloadFile('https://raw.github.com/pypa/pip/master/contrib/get-pip.py', 'C:\Python27\get-pip.py')
+
+python C:\Python27\distribute_setup.py
+python C:\Python27\get-pip.py
